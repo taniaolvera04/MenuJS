@@ -15,4 +15,5 @@
     border-style: solid;
     transition: 2s ease all;
   margin: auto;
+  translate: 0px 0px;
   }

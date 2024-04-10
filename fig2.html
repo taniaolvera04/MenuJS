@@ -12,7 +12,7 @@
   
   <h1>FIGURAS</h1>
   
-<table align="center">
+<table>
   
   <tr>
     <td>Ancho</td>
@@ -56,12 +56,65 @@
            <option value="double">double</option>  
       </select>
       </td>
+
+      <tr>
+        <td>Radius</td>
+        <td><input type="range" min="1" max="100" value="1" id="radius"></td>
+        <td><div id="vradius">1</div></td>
+      </tr>
+      <tr>
+        <td>Rotate</td>
+        <td><input type="range" min="1" max="360" value="1" id="rotate" ></td>
+        <td><div id="vrotate"></div></td>
+      </tr>
+
+      <tr>
+        <td>Translate X</td>
+        <td><input type="range" min="-200" max="200" value="0" id="tx" ></td>
+        <td><div id="vtx"></div></td>
+      </tr>
+
+      <tr>
+        <td>Translate Y</td>
+        <td><input type="range" min="-200" max="200" value="0" id="ty" ></td>
+        <td><div id="vty"></div></td>
+      </tr>
+
+      <tr>
+        <td>Scale</td>
+        <td><input type="range" min="1" max="400" value="0" id="scale" ></td>
+        <td><div id="vs"></div></td>
+      </tr>
+
+      <tr>
+        <td>Sombra x</td>
+        <td><input type="range" min="1" max="400" value="0" id="sx" ></td>
+        <td><div id="vsx"></div></td>
+      </tr>
+
+      <tr>
+        <td>Sombra y</td>
+        <td><input type="range" min="1" max="400" value="0" id="sy" ></td>
+        <td><div id="vsy"></div></td>
+      </tr>
     </tr><br>
+
+    <tr>
+        <td>Tamaño sombra</td>
+        <td><input type="range" min="1" max="400" value="0" id="ts" ></td>
+        <td><div id="vts"></div></td>
+      </tr>
     
+
+      <tr>
+        <td>Color sombra</td>
+        <td><input type="color" id="cs"></td>
+        <td><div id="vcs"></div></td>
+      </tr>
 </table><br><br>
 
 
-<img src="" id="cajita">
+<div id="cajita"></div>
 
   
 <script src="fig2.js"></script>
