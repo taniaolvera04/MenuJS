@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body{
+   text-align: center;
+  }
+  
+  h1{
+    text-align: center;
+    color: rebeccapurple;
+  }
+  
+  #value{
+    font-size: 200px;
+    border: 1px solid black;
+  }
+  
+  #cajita{
+    height: 10px;
+    width: 10px;
+    background: plum;
+   margin: auto;
+  }

@@ -1,0 +1,18 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body{
+    text-align: center;
+  }
+  
+  #cajita{
+    height: 10px;
+    width: 10px;
+    background: silver;
+    border-style: solid;
+    transition: 2s ease all;
+  margin: auto;
+  }
