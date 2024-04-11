@@ -1,13 +1,7 @@
-@font-face {
-  font-family: Out;
-  src: url(fonts/Outfit-Medium.ttf);
-}
-
 *{
     margin: 1.5;
     padding: 1.5;
     box-sizing: border-box;
-    font-family: Out;
   }
   
   body{
