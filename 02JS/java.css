@@ -1,0 +1,104 @@
+@font-face {
+    font-family: Out;
+    src: url(fonts/Outfit-Medium.ttf);
+  }
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Out;
+}
+
+body{
+    text-align: center;
+    background: rgb(255, 255, 192);
+}
+
+h1{
+    color: lightcoral;
+}
+
+h3{
+    color: rgb(175, 15, 90);
+    text-align: center;
+}
+
+#cal{
+    height: 550px;
+    width: 300px;
+    border-radius: 10px;
+    padding: 40px;
+    margin: auto;
+    background: lightgrey;
+    border: 3px solid lightslategray;
+    box-shadow: 0 0  35px gray;
+}
+
+#num1{
+    width: 100%;
+    height: 40px;
+    border: 2px solid lightpink;
+    color: cadetblue;
+    border-radius: 10px;
+    font-weight: normal;
+    margin: 20px auto;
+    text-align: center;
+    font-size: 20px;
+    font-style: bold;
+}
+
+#num2{
+    width: 100%;
+    height: 40px;
+    border: 2px solid lightpink;
+    color: cadetblue;
+    border-radius: 10px;
+    font-weight: normal;
+    margin: 20px auto;
+    text-align: center;
+    font-size: 20px;
+    font-style: bold;
+}
+
+input:focus{
+    box-shadow: 0 0 15px darkgoldenrod;
+}
+
+p{
+    margin: 20px auto 20px;
+    font-size: 23px;
+    font-style: italic;
+    text-shadow: -10px 3px 30px purple;
+}
+
+button{
+    border-radius: 10px;
+    background: lightcyan;
+    width: 60px;
+    height: 40px;
+    border: 2px solid skyblue;
+    font-size: 20px;
+    font-weight: normal;
+    text-align: center;
+}
+
+button:hover{
+    background: lightpink;
+    border: 2px solid hotpink;
+    transform: scale(1.2);
+    color:purple;
+}
+
+#b{
+    position: relative;
+    left: -10px;
+}
+
+#res{
+    margin: 100px 40px;
+    font-size: 30px;
+    height: 50px;
+    width: 150px;
+    position: relative;
+    left:565px;
+}

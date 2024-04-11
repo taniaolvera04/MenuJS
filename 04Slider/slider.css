@@ -1,7 +1,13 @@
+@font-face {
+  font-family: Out;
+  src: url(fonts/Outfit-Medium.ttf);
+}
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Out;
   }
   
   body{
@@ -14,13 +20,13 @@
   }
   
   #value{
-    font-size: 200px;
+    font-size: 150px;
     border: 1px solid black;
   }
   
   #cajita{
     height: 10px;
     width: 10px;
-    background: plum;
+    background: rgb(155, 82, 155);
    margin: auto;
   }

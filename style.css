@@ -1,13 +1,12 @@
 @font-face {
-    font-family: Marhey;
-    src: url(font/Marhey-Bold.ttf);
-    src: url(font/Marhey-Medium.ttf);
+    font-family: Out;
+    src: url(fonts/Outfit-Medium.ttf);
 }
 *{
     margin:0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Marhey;
+    font-family: Out;
 }
 
 body{

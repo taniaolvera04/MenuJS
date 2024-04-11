@@ -1,7 +1,13 @@
+@font-face {
+    font-family: Out;
+    src: url(fonts/Outfit-Medium.ttf);
+  }
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Out;
 }
 
 h1{
@@ -86,50 +92,49 @@ button:hover{
 
 #b{
     position: relative;
-    left: -50px;
+    left: -70px;
 }
 
 #b2{
     position: relative;
-    left: -40px;
+    left: -50px;
 }
 
 #b3{
     position: relative;
-    left: -30px;
+    left: -40px;
 }
 
 #b4{
     position: relative;
-    right: -170px;
-    top: -40px;
+    right: -130px;
+    top: 0px;
 }
 
 #b5{
     position: relative;
-    left: -80px;
-    top: 20px;
+    left: -95px;
+    top: 0px;
 }
 
 #b6{
     position: relative;
-    left: -60px;
-    bottom: -20px;
+    left: -80px;
+    bottom: 0px;
 }
 
 #b7{
     position: relative;
-    right: -90px;
-    bottom: 20px;
+    right: -20px;
+    bottom: 0px;
 }
 
 #res{
     margin: 100px 40px 40px 100px;
     font-size: 30px;
-    border-radius: 10px;
     height: 50px;
     width: 150px;
-    margin-top: 20px;
-    margin-left: 30px;
     text-align: center;
+    position: relative;
+    left: 500px;
 }
