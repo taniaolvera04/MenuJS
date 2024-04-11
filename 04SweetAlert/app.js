@@ -97,6 +97,7 @@ Swal.fire({
     showDenyButton: true,
     showCancelButton: true,
     confirmButtonText: "Confirmar",
+    
     cancelButtonColor: "#FF0000",
     confirmButtonColor: "#00913f",
     denyButtonColor:"#0000FF",
