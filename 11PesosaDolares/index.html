@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CONVERSION DE PESOS A DÓLARES</title>
+  <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+  
+  
+</head>
+
+<body class="text-center">
+ <!-- As a heading -->
+ <nav class="navbar bg-dark border-bottom border-body" data-bs-theme="dark">
+    <div class="container-fluid">
+      <span class="navbar-brand m-auto h1">CONVERSIÓN DE PESOS(MXN) A DÓLARES(USD)</span>
+    </div>
+  </nav>
+
+ <table class="table w-50 m-auto">
+    <tr>
+        <td><h4>PESOS</h4></td>
+    </tr>
+   <tr>
+     <td><input type="range" min="1" max="1000"value="1" id="mxn" class="form-control"></td>
+   </tr>
+   <tr>
+    <td><div id="pe"></div></td>
+   </tr>
+     <tr>
+       <td colspan="5">
+         <button class="btn btn-danger" id="borrar"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16">
+            <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5M8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5m3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0"/>
+          </svg>   BORRAR</button>
+         </td>
+     </tr>
+     <tr>
+        <td><div id="usd" class="table w-50 m-auto"></div></td>
+       </tr>
+ </table>
+
+  </div>
+ <script src="app.js"></script>
+</body>
+
+</html>
