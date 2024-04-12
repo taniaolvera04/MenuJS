@@ -9,7 +9,7 @@ mxn.oninput=()=>{
   
  pe.innerHTML="$"+(mxn.value)+ "   MXN";
   let vn=parseFloat(mxn.value);
-  let r=(vn*16.65).toFixed(2);
+  let r=(vn/16.65).toFixed(2);
   usd.innerHTML="$" +r + "   USD";
 }
 
