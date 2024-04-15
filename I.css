@@ -1,0 +1,50 @@
+*{
+  margin:1;
+  padding: 1;
+  box-sizing: border-box;
+}
+
+#vpeso{
+  font-size: 40px;
+  color: plum;
+}
+
+#valtura{
+  font-size: 40px;
+  color: lightpink;
+}
+
+#imc{
+  font-size: 40px;
+  color: lightblue;
+}
+
+#f1{
+  transition: 2s ease all;
+  transform: scale(1);
+}
+
+#f2{
+  transition: 2s ease all;
+  transform: scale(1);
+}
+
+#f3{
+  transition: 2s ease all;
+  transform: scale(1);
+}
+
+#f4{
+  transition: 2s ease all;
+  transform: scale(1);
+} 
+
+#f5{
+  transition: 2s ease all;
+  transform: scale(1);
+}
+
+#f6{
+  transition: 2s ease all;
+  transform: scale(1);
+}
