@@ -26,7 +26,7 @@ valtura.innerHTML=altura.value + " cm";
 altura.oninput=()=>{
   valtura.innerHTML=altura.value + " cm";
   
-  spinner.innerHTML="<img src='sp.gif' width=100>"
+  spinner.innerHTML="<img src='sp.gif' width=80>"
   
   setTimeout(()=>{
   
@@ -73,7 +73,6 @@ if(i>=40){
   }, 2000);
 
 }
-
 
 
 
