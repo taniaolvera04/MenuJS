@@ -4,6 +4,7 @@
   box-sizing: border-box;
 }
 
+
 #vpeso{
   font-size: 40px;
   color: plum;
@@ -17,6 +18,11 @@
 #imc{
   font-size: 40px;
   color: lightblue;
+}
+
+#tabla{
+  color: white;
+  font-weight: bolder;
 }
 
 #f1{
