@@ -1,0 +1,15 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#vdia{
+font-size: 40px;
+color: rgb(148, 146, 146);
+} 
+
+#fecha{
+    font-size: 40px;
+    color: rgb(148, 146, 146);
+} 
