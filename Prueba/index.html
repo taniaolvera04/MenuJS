@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filas y Columnas</title>
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <style>
+        table {
+            border-collapse: collapse;
+            border: 1px solid black;
+            margin: 0 auto;
+        }
+
+        td {
+            border: 1px solid black;
+            width: 40px;
+            height: 40px;
+            text-align: center; 
+        }
+
+    </style>
+</head>
+<body class="text-center">
+    <div class="container">
+        <nav class="navbar bg-dark border-bottom border-body" data-bs-theme="dark">
+          <div class="container-fluid">
+            <span class="navbar-brand m-auto h1">FILAS Y COLUMNAS</span>
+          </div>
+        </nav>
+      </div>
+
+  
+  <h3>FILAS</h3>
+    <input type="range" min="10" max="30" value="10" id="fila"  class="form-control w-50 m-auto">
+        <div id="vfila"></div><br>
+       <h3>COLUMNAS</h3>
+      <input type="range" min="10" max="30" value="10" id="columna"  class="form-control w-50 m-auto">
+        <div id="vcolumna"></div><br>
+        
+
+<table id="tabla"></table>
+
+<script src="app.js"></script>
+</body>
+</html>

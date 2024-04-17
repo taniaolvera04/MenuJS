@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#vfi{
+    font-size: 40px;
+    color: rgb(161, 106, 161);
+}
+
+#vco{
+    font-size: 40px;
+    color: rgb(206, 67, 137);
+}
+
+table{
+    border-collapse: collapse;
+    border: 2px solid  rgb(255, 103, 217);
+    margin: 0 auto;
+}
+
+td {
+    border: 2px solid rgb(255, 103, 217);
+    width: 40px;
+    height: 40px;
+    text-align: center; 
+}
+
+tr{
+    border: 2px solid rgb(255, 103, 217);
+    width: 40px;
+    height: 40px;
+    text-align: center; 
+}
