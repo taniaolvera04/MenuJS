@@ -16,6 +16,16 @@ b2.onclick=()=>{
   setTimeout(()=>{
     img.innerHTML="<img src='i2.jpg' width=300>";
   },950);
+  
+  img.style.transform="rotateY(-180deg)";
+  img.style.transition="all 0.5s linear";
+  img.style.transformStyle="preserve-3d";
+  img.style.backfaceVisibility="hidden";
+
+  setTimeout(()=>{
+     img.style.transform="rotate(0deg)";
+     img.style.transition="all 0.5s linear";
+  }, 250);
 }
 
 b3.onclick=()=>{

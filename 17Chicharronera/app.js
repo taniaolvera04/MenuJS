@@ -33,7 +33,7 @@ const calcular = () => {
     } else if (factor > 0) {
         let x1 = (-b + Math.sqrt(factor)) / (2 * a);
         let x2 = (-b - Math.sqrt(factor)) / (2 * a);
-        r.innerHTML = "x1= " + x1 + "<br>" + "x2= " + x2;
+        r.innerHTML = "x1= " + x1.toFixed(1) + "<br>" + "x2= " + x2.toFixed(1);
     } else {
         r.innerHTML = "No hay solución";
     }
