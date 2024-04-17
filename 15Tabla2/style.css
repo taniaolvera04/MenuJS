@@ -14,20 +14,35 @@
     color: rgb(206, 67, 137);
 }
 
-table{
+#ta{
     border-collapse: collapse;
     margin: 0 auto;
 }
 
 td {
-    border: 2px solid rgb(0, 0, 0);
+    border: 1px solid rgb(0, 0, 0);
     width: 40px;
     height: 40px;
     text-align: center; 
 }
 
 tr{
-    border: 2px solid rgb(0, 0, 0);
+    border: 1px solid rgb(0, 0, 0);
+    width: 40px;
+    height: 40px;
+    text-align: center; 
+}
+
+
+#o {
+    border:none;
+    width: 40px;
+    height: 40px;
+    text-align: center; 
+}
+
+#h{
+    border: none;
     width: 40px;
     height: 40px;
     text-align: center; 

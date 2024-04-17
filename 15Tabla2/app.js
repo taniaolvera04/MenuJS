@@ -3,6 +3,8 @@ let vfi=document.querySelector("#vfi");
 let co=document.querySelector("#co");
 let vco=document.querySelector("#vco");
 let ta=document.querySelector("#ta");
+let c1=document.querySelector("#c1");
+let c2=document.querySelector("#c2");
 
 
 vfi.innerHTML = fi.value;
@@ -23,18 +25,17 @@ const editar = () => {
 
 const tabla = (fi, co) => {
     let table= '';
+
    for(let o=0; o<fi ; o++){
     table+='<tr>';
-    
+
 
     for(let p=0; p<co; p++){
-        table+='<td></td>';
-
-        
+        table+='<td></td>';   
     }
     table+='</tr>';
    }
-    
 
     ta.innerHTML = table;
+
 };
