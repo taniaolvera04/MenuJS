@@ -1,0 +1,10 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+div{
+    font-size: 30px;
+    color: rgb(150, 107, 150);
+}
