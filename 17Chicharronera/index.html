@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CHICHARRONERA</title>
-    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="text-center">
@@ -16,31 +16,29 @@
         </nav>
       </div><br><br>
 
+<div id="chi"> </div>
+
       <table class="table w-50 m-auto">
         <tr>
           <td><h3>A</h3></td>
-        </tr>
-        <tr>
             <td><input type="range" min="-20" max="20" value="0" id="ca" class="form-control"></td>
             <td><div id="va"></div></td>
         </tr>
         <td><h3>B</h3></td>
-    </tr>
-    <tr>
         <td><input type="range" min="-20" max="20" value="0" id="cb" class="form-control"></td>
         <td><div id="vb"></div></td>
     </tr>
 
     <td><h3>C</h3></td>
-</tr>
-<tr>
     <td><input type="range" min="-20" max="20" value="0" id="cc" class="form-control"></td>
     <td><div id="vc"></div></td>
 </tr>
-
       </table><br>
+      
+      <h3>ECUACIÓN</h3>
+<div id="ec"></div><br>
 
-
+<h3>RESULTADO</h3>
       <div id="r"></div>
     <script src="app.js"></script>
 </body>
