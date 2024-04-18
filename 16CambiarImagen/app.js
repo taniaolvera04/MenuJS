@@ -8,14 +8,7 @@ b1.onclick=()=>{
     img.innerHTML="<img src='sp.gif' width=300>";
   setTimeout(()=>{
     img.innerHTML="<img src='i1.jpg' width=300>";
-  },950);
-}
-
-b2.onclick=()=>{
-    img.innerHTML="<img src='sp.gif' width=250>";
-  setTimeout(()=>{
-    img.innerHTML="<img src='i2.jpg' width=300>";
-  },950);
+  },500);
   
   img.style.transform="rotateY(-180deg)";
   img.style.transition="all 0.5s linear";
@@ -25,19 +18,56 @@ b2.onclick=()=>{
   setTimeout(()=>{
      img.style.transform="rotate(0deg)";
      img.style.transition="all 0.5s linear";
-  }, 250);
+  }, 500);
+}
+
+b2.onclick=()=>{
+    img.innerHTML="<img src='sp.gif' width=250>";
+  setTimeout(()=>{
+    img.innerHTML="<img src='i2.jpg' width=300>";
+  },500);
+  
+  img.style.transform="rotateY(-180deg)";
+  img.style.transition="all 0.5s linear";
+  img.style.transformStyle="preserve-3d";
+  img.style.backfaceVisibility="hidden";
+
+  setTimeout(()=>{
+     img.style.transform="rotate(0deg)";
+     img.style.transition="all 0.5s linear";
+  }, 500);
 }
 
 b3.onclick=()=>{
     img.innerHTML="<img src='sp.gif' width=300>";
   setTimeout(()=>{
     img.innerHTML="<img src='i3.png' width=300>";
-  },950);
+  },500);
+  
+  img.style.transform="rotateY(-180deg)";
+  img.style.transition="all 0.5s linear";
+  img.style.transformStyle="preserve-3d";
+  img.style.backfaceVisibility="hidden";
+
+  setTimeout(()=>{
+     img.style.transform="rotate(0deg)";
+     img.style.transition="all 0.5s linear";
+  }, 500);
 }
 
 b4.onclick=()=>{
     img.innerHTML="<img src='sp.gif' width=300>";
   setTimeout(()=>{
     img.innerHTML="<img src='i4.jpg' width=300>";
-  },950);
+  },500);
+  
+  img.style.transform="rotateY(-180deg)";
+  img.style.transition="all 0.5s linear";
+  img.style.transformStyle="preserve-3d";
+  img.style.backfaceVisibility="hidden";
+
+  setTimeout(()=>{
+     img.style.transform="rotate(0deg)";
+     img.style.transition="all 0.5s linear";
+  }, 500);
 }
