@@ -11,7 +11,7 @@ let chi = document.querySelector("#chi");
 let ec= document.querySelector("#ec");
 let r = document.querySelector("#r");
 
-chi.innerHTML="<img src='images.png' width=200>";
+chi.innerHTML="<img src='chi.png' width=200>";
 
 va.innerHTML = ca.value;
 vb.innerHTML = cb.value;
@@ -35,8 +35,13 @@ const calcular = () => {
         r.innerHTML="Por favor, ingresa valores válidos";
         return;
     }
+    
+let sa=(a>=0)?"+"+a:a;
+let sb=(b>=0)?"+"+b:b;
+let sc=(c>=0)?"+"+c:c;
 
-ec.innerHTML=a+"x² + "+b+"x + "+c+" = 0";
+ec.innerHTML=sa+"x² "+sb+"x "+sc+" = 0";
+
 
     if(a===0){
         r.innerHTML="No es una ecuación cuadrática válida";
