@@ -11,7 +11,7 @@ let chi = document.querySelector("#chi");
 let ec= document.querySelector("#ec");
 let r = document.querySelector("#r");
 
-chi.innerHTML="<img src='chi.png' width=200>";
+chi.innerHTML="<img src='image.png' width=200>";
 
 va.innerHTML = ca.value;
 vb.innerHTML = cb.value;
