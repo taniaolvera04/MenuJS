@@ -1,0 +1,35 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+div{
+  font-size: 30px;
+  margin: auto;
+}
+
+#cu{
+  width: 250px;
+  height: 250px;
+  border: 2px solid silver;
+  transition: 2s ease all;
+}
+
+#rgb{
+  width: 300px;
+  height: 60px;
+  border: 1px solid silver;
+   display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#hexad{
+  width: 300px;
+  height: 60px;
+  border: 1px solid silver;
+   display: flex;
+  align-items: center;
+  justify-content: center;
+}
