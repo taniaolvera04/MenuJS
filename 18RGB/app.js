@@ -20,9 +20,9 @@ verde.oninput = () => { colores() };
 azul.oninput = () => { colores() };
 
 const colores = () => {
-    let r = (rojo.value);
-    let v = (verde.value);
-    let a = (azul.value);
+    let r = parseInt(rojo.value);
+    let v = parseInt(verde.value);
+    let a = parseInt(azul.value);
     let valor;
     vrojo.innerHTML = r;
     vverde.innerHTML = v;
@@ -37,6 +37,6 @@ const colores = () => {
 }
 
 function convertirhexa(valor) {
-  let hexa=(valor>16)?valor.toString(16).toUpperCase():"0"+valor.toString(16).toUpperCase()";
+  let hexa=(valor>16)?valor.toString(16).toUpperCase():"0"+valor.toString(16).toUpperCase();
   return hexa;
 }

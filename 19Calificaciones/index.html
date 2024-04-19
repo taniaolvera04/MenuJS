@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CALIFICACIONES</title>
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="text-center">
+
+    <nav class="navbar bg-dark border-bottom border-body" data-bs-theme="dark">
+        <div class="container-fluid">
+          <a class="navbar-brand m-auto h1">PROMEDIO CALIFICACIONES</a>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div>
+      </nav>
+
+    <table class="table w-50 m-auto">
+        <tr>
+            <td><h4>ECOLOGÍA</h4></td>
+        </tr>
+        <tr>
+            <td><input type="range" min="5" max="10" value="5" id="eco" class="form-control"></td>
+            <td><div id="veco"></div></td>
+        </tr>
+        <tr>
+            <td><h4>INGLÉS</h4></td>
+        </tr>
+        <tr>
+            <td><input type="range" min="5" max="10" value="5" id="ing" class="form-control"></td>
+            <td><div id="ving"></div></td>
+        </tr>
+        <tr>
+            <td><h4>FÍSICA</h4></td>
+        </tr>
+        <tr>
+            <td><input type="range" min="5" max="10" value="5" id="fis" class="form-control"></td>
+            <td><div id="vfis"></div></td>
+        </tr>
+        <tr>
+            <td><h4>CÁLCULO DIFERENCIAL</h4></td>
+        </tr>
+        <tr>
+            <td><input type="range" min="5" max="10" value="5" id="calc" class="form-control"></td>
+            <td><div id="vcalc"></div></td>
+        </tr>
+        <tr>
+            <td><h4>MÓDULO</h4></td>
+        </tr>
+        <tr>
+            <td><input type="range" min="5" max="10" value="5" id="mod" class="form-control"></td>
+            <td><div id="vmod"></div></td>
+        </tr>
+    </table>
+    
+    <script src="app.js"></script>
+</body>
+</html>
