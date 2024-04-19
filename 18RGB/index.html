@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RGB</title>
+  <link rel="stylesheet" href="bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+  
+</head>
+
+<body class="text-center">
+  
+      <div class="container">
+        <nav class="navbar bg-dark border-bottom border-body" data-bs-theme="dark">
+          <div class="container-fluid">
+            <span class="navbar-brand m-auto w-100 h1">RGB</span>
+          </div>
+        </nav>
+      </div><br><br>
+<table class="table w-60 m-auto">
+  <tr>
+    <td><h3>ROJO</h3></td>
+    <td><input type="range" min="0" max="255" id="rojo" value="0"  class="form-control"></td>
+    <td><div id="vrojo"></div></td>
+  </tr>
+    <tr>
+    <td><h3>VERDE</h3></td>
+    <td><input type="range" min="0" max="255" id="verde" value="0"  class="form-control"></td>
+    <td><div id="vverde"></div></td>
+  </tr>
+    <tr>
+    <td><h3>AZUL</h3></td>
+    <td><input type="range" min="0" max="255" id="azul"  value="0"  class="form-control"></td>
+    <td><div id="vazul"></div></td>
+  </tr>
+</table><br><br>
+
+  <div id="rgb"></div><br>
+<div id="hexad"></div><br>
+<div id="cu"></div>
+
+
+<script src="app.js"></script>
+</body>
+
+</html>
