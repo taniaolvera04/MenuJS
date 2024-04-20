@@ -20,7 +20,8 @@
     flex-direction: column;
     align-items: center;
 }
-.circular-progress{
+.circular-progress {
+    /* Tu código actual */
     position: relative;
     height: 250px;
     width: 250px;
@@ -29,21 +30,63 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: 1s ease-in-out;
+    /* Nueva línea para la animación */
+    animation: progress-animation 2s ease forwards;
 }
-.circular-progress::before{
+
+/* Nueva animación */
+@keyframes progress-animation {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.circular-progress::before {
+    /* Tu código actual */
     content: "";
     position: absolute;
     height: 210px;
     width: 210px;
     border-radius: 50%;
     background-color: #fff;
+    /* Nueva línea para la animación */
+    animation: progress-inner-animation 2s ease forwards;
 }
-.progress-value{
+
+/* Nueva animación */
+@keyframes progress-inner-animation {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.progress-value {
+    /* Tu código actual */
     position: relative;
     font-size: 40px;
     font-weight: 600;
     color: #ff3b3b;
+    /* Nueva línea para la animación */
+    opacity: 0;
+    animation: value-animation 2s ease forwards;
+}
+
+/* Nueva animación */
+@keyframes value-animation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 .text{
     font-size: 30px;
