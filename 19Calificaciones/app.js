@@ -10,7 +10,6 @@ let vfis = document.querySelector("#vfis");
 let vcalc = document.querySelector("#vcalc");
 let vmod = document.querySelector("#vmod");
 
-
 let circularProgress = document.querySelector(".circular-progress"),
     progressValue = document.querySelector(".progress-value");
 
@@ -26,6 +25,11 @@ fis.oninput = () => { promedio(); };
 calc.oninput = () => { promedio(); };
 mod.oninput = () => { promedio(); };
 
+let progressStartValue = 50,
+    speed = 100;
+
+progressValue.textContent = `${progressStartValue}%`;
+
 const promedio = () => {
     let e = parseInt(eco.value);
     let i = parseInt(ing.value);
@@ -40,33 +44,29 @@ const promedio = () => {
     vmod.innerHTML = m;
 
     let r = parseFloat((e + i + fi + c + m) / 5);
+    let progressEndValue = 50 + (r - 5) * 10;
 
-    let progressStartValue = (r * 10)-1, 
-        progressEndValue = Math.min(100, progressStartValue), 
-        speed = 100;
+    if (r >= 5 && r <= 5.9) {
+        circularProgress.style.background = `conic-gradient(#ff3b3b ${progressEndValue * 3.6}deg, #ededed 0deg)`;
+        progressValue.style.color = "#ff3b3b";
+    } else if (r >= 6 && r <= 7.4) {
+        circularProgress.style.background = `conic-gradient(#ffac40 ${progressEndValue * 3.6}deg, #ededed 0deg)`;
+        progressValue.style.color = "#ffac40";
+    } else if (r >= 7.5 && r <= 8.9) {
+        circularProgress.style.background = `conic-gradient(#ffea2b ${progressEndValue * 3.6}deg, #ededed 0deg)`;
+        progressValue.style.color = "#ffea2b";
+    } else if (r >= 9 && r <= 10) {
+        circularProgress.style.background = `conic-gradient(#75ff81 ${progressEndValue * 3.6}deg, #ededed 0deg)`;
+        progressValue.style.color = "#75ff81";
+    }
 
-    let progress = setInterval(() => {
-        progressStartValue++;
-        progressValue.textContent = `${Math.min(progressStartValue, 100)}%`; 
-
-        if (r >=5 && r<= 5.9) {
-            circularProgress.style.background = `conic-gradient(#ff3b3b ${Math.min(progressStartValue * 3.6, 360)}deg, #ededed 0deg)`;
-        progressValue.style.color="#ff3b3b";
-        } 
-        if(r>=6 && r<=7.4){
-            circularProgress.style.background = `conic-gradient(#ffac40 ${Math.min(progressStartValue * 3.6, 360)}deg, #ededed 0deg)`;
-            progressValue.style.color="#ffac40";
-        }
-        if(r>=7.5 && r<=8.9){
-            circularProgress.style.background = `conic-gradient(#ffea2b ${Math.min(progressStartValue * 3.6, 360)}deg, #ededed 0deg)`; 
-            progressValue.style.color="#ffea2b";
-        }
-        if(r>=9 && r<=10){
-            circularProgress.style.background = `conic-gradient(#75ff81 ${Math.min(progressStartValue * 3.6, 360)}deg, #ededed 0deg)`;
-            progressValue.style.color="#75ff81";
-        }
-        if (progressStartValue >= progressEndValue) {
-            clearInterval(progress);
-        }
-    }, speed);
+    progressValue.textContent = `${progressEndValue}%`;
 };
+
+promedio();
+
+let inputs = document.querySelectorAll('input[type="range"]');
+inputs.forEach(input => {
+    input.addEventListener('input', promedio);
+});
+
