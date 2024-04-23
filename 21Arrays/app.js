@@ -8,7 +8,8 @@ var splice=document.getElementById("splice");
 
  var miarray=new Array();
 
-splice.onclick=()=>{
+splice.onclick=async()=>{
+
   const {value: pos}=await Swal.fire({
     title: "SPLICE",
     input: "text",
@@ -19,12 +20,21 @@ splice.onclick=()=>{
         return "Ingresa valor válido";
       }
     }
-  });
+  });    
+
+
+
 const {value: n}=await Swal.fire({
   title:"SPLICE",
-  input: text,
-  inputLabel
-})
+  input: "text",
+  inputLabel: "¿Cuántos valores?",
+  showCancelButton: true,
+  inputValidator: (value)=>{
+    if(!value){
+      return "Ingresa valor válido";
+    }
+  }
+});
 
   try{
     miarray.splice(pos,n);
@@ -34,7 +44,7 @@ const {value: n}=await Swal.fire({
       title: "SPLICE",
       text: "No se pudo eliminar",
       icon:"error"
-    })
+    });
   }
 }
 
