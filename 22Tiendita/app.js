@@ -1,5 +1,5 @@
 var productos=["Kinder","Pepper","Takis","Vuala","Yakult"];
-var precios=[23, 18, 17, 20, 7];
+var precios=[23, 20, 17, 20, 7];
 
 var selectProductos=document.getElementById("productos");
 var imgProductos=document.getElementById("imgProducto");
