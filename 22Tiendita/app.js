@@ -29,7 +29,7 @@ const cargarPrecio=()=>{
 
 
 agregarCarrito.onclick=()=>{
-    let divcarrito=doccument.getElementById("carrito");
+    let divCarrito=doccument.getElementById("carrito");
     let item=new Array();
     item.push(posProducto);
     item.push(posProducto);
