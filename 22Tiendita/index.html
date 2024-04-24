@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STRAWBERRY SHOP</title>
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+</head>
+<body class="text-center" onload="cargarProductos();">
+
+    <nav class="navbar bg-dark border-bottom border-body" data-bs-theme="dark">
+        <div class="container-fluid">
+            <img src="img/logo.png" alt="Logo" width="70" height="50" class="d-inline-block align-text-top m-auto">
+            <span class="navbar-brand m-auto w-100 h1">STRAWBERRY SHOP</span>
+          </a>
+        </div>
+      </nav><br><br>
+
+      <div class="container-fluid m-auto w-75">
+        <div class="card text-center mt-4">
+            <div class="card-header">
+              <img src="img/logo2.png" alt="" height="40px">
+            </div>
+            <div class="card-body">
+             <table class="table w-50 m-auto">
+              <tr>
+                <td>
+                  <h2>PRODUCTO</h2>
+                </td>
+                <td>
+                  <h2>IMAGEN</h2>
+                </td>
+                <td>
+                  <h2>PRECIO</h2>
+                </td>
+              </tr>
+
+                <tr>
+                    <td class="aling-middle">
+                        <label for="">PRODUCTO</label>
+                        <select name="producto" id="productos"class="form-select" aria-label="Default select example">
+                            
+                        </select>
+                    </td>
+
+                    <td>
+                        <img src="img/logo2.png" alt="" id="imgProducto" height="80px">
+                    </td>
+                    <td><h1 id="precioProductos">$0</h1></td>
+                </tr>
+             </table>
+            </div>
+            <div id="carrito"></div>
+            <div class="card-footer text-body-secondary">
+              TIENDITA DE STRAWBERRY
+            </div>
+          </div> 
+      </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
