@@ -187,3 +187,13 @@ const verProductos=()=>{
   })
   divListaProductos.innerHTML=tablaHTML;
 }
+
+
+const addProductos=()=>{
+  let nombre=document.getElementById('nombreProducto').value;
+  let precio=document.getElementById('pProducto').value;
+  productos.push(nombre);
+  precios.push(precio);
+  cargarProductos();
+  verProductos();
+}
