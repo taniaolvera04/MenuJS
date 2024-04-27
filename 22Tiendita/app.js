@@ -150,6 +150,7 @@ if (pago>= totalp) {
         text: "Tu cambio es de : $"+cambio,
         icon: "success"
     });
+    desaparecerT();
 } else {
   Swal.fire({
         title: "Ingresa una cantidad válida",
@@ -159,6 +160,7 @@ if (pago>= totalp) {
 }
   }
 });
+
         }
 
 
@@ -196,4 +198,28 @@ const addProductos=()=>{
   precios.push(precio);
   cargarProductos();
   verProductos();
+}
+
+delProductos=(index)=>{
+  let divListaProductos=document.getElementById("listaProductos");
+  Swal.fire({
+    title: "¿Estás seguro de eliminar este producto?",
+    showDenyButton: true,
+    confirmButtonText: "Si, eliminar",
+    denyButtonText: "No estoy seguro"
+  }).then((result) => {
+  
+    if (result.isConfirmed) {
+      productos.splice(index, 1);
+      precios.splice(index, 1);
+      verProductos();
+      cargarProductos();
+      Swal.fire("El producto se eliminó exitosamente", "", "success");
+    }
+  });
+}
+
+const desaparecerT=()=>{
+  carrito=[];
+  document.getElementById("carrito").innerHTML="";
 }
