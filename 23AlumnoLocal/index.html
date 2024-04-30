@@ -43,6 +43,7 @@
         </td>
         <td> 
             <select name="grupo" class="form-select text-center" aria-label="Default select example" id="g">
+              <option value="401">401</option>
             <option value="402">402</option>
       <option value="403">403</option>
   <option value="404">404</option>
@@ -59,8 +60,8 @@
         <td>  
             <select name="carrera"  class="form-select text-center" aria-label="Default select example" id="c">
             <option value="Ventas">Ventas</option>
-            <option value="Programacion">Programación</option>
-            <option value="Maquinas">Máquinas</option>
+            <option value="Programación">Programación</option>
+            <option value="Máquinas">Máquinas</option>
           </select>
         </td>
     </tr>
@@ -85,40 +86,58 @@
      
     <div id="res"></div>
 
-    <div class="modal fade" id="editar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-xl">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h1 class="modal-title fs-5 w-100 text-center" id="exampleModalLabel">EDITAR ALUMNOS</h1>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <table class="table w-100 m-auto">
-                    <tr>
-                      <td>
-                        <label for="nombre" class="form-label">NOMBRE DEL ALUMNO</label>
-                        <input type="text" class="form-control" id="nombreAlumno">
-                      </td>
-                      <td>
-                        <label for="ap" class="form-label">APELLIDO PATERNO</label>
-                        <input type="text" class="form-control" id="apAlumno">
-                      </td>
-                      <td>
-                        <button class="btn btn-success" onclick="actAlumnos()"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-bag-plus-fill mx-4" viewBox="0 0 16 16">
-                          <path fill-rule="evenodd" d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0M8.5 8a.5.5 0 0 0-1 0v1.5H6a.5.5 0 0 0 0 1h1.5V12a.5.5 0 0 0 1 0v-1.5H10a.5.5 0 0 0 0-1H8.5z"/>
-                        </svg></button>
-                      </td>
-                    </tr>
-                  </table>
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
-                  <button type="button" class="btn btn-success">Guardar</button>
-                </div>
-              </div>
+
+   
+    <div class="modal fade" id="actualizarAlumnos" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5 w-100 m-auto" id="exampleModalLabel">Actualización de Registros</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nom" class="form-control  text-center w-25 m-auto">
+
+            <label for="ap">Apellido Paterno:</label>
+            <input type="text" id="apa" class="form-control  text-center w-25 m-auto">
+
+            <label for="am">Apellido Materno:</label>
+            <input type="text" id="ama" class="form-control  text-center w-25 m-auto">
+
+            <label for="g">Grupo:</label>
+            <select name="grupo" id="gr" class="form-select text-center w-25 m-auto">
+              <option value="401">401</option>
+              <option value="402">402</option>
+        <option value="403">403</option>
+    <option value="404">404</option>
+    <option value="405">405</option>
+    <option value="406">406</option>
+   <option value="407">407</option>
+            </select>
+
+            <label for="c">Carrera:</label>
+            <select name="carrera" id="ca" class="form-select text-center w-25 m-auto">
+              <option value="Ventas">Ventas</option>
+              <option value="Programación">Programación</option>
+              <option value="Máquinas">Máquinas</option>
+            </select>
+
+          </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+              <button type="button" id="actualizar" class="btn btn-success">    
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-floppy-fill mx-2" viewBox="0 0 16 16">
+                <path d="M0 1.5A1.5 1.5 0 0 1 1.5 0H3v5.5A1.5 1.5 0 0 0 4.5 7h7A1.5 1.5 0 0 0 13 5.5V0h.086a1.5 1.5 0 0 1 1.06.44l1.415 1.414A1.5 1.5 0 0 1 16 2.914V14.5a1.5 1.5 0 0 1-1.5 1.5H14v-5.5A1.5 1.5 0 0 0 12.5 9h-9A1.5 1.5 0 0 0 2 10.5V16h-.5A1.5 1.5 0 0 1 0 14.5z"/>
+                <path d="M3 16h10v-5.5a.5.5 0 0 0-.5-.5h-9a.5.5 0 0 0-.5.5zm9-16H4v5.5a.5.5 0 0 0 .5.5h7a.5.5 0 0 0 .5-.5zM9 1h2v4H9z"/>
+              </svg>
+               Actualizar</button>
             </div>
           </div>
+        </div>
+      </div>
 
+  <script src="bootstrap.bundle.min.js"></script>
 
 <script src="sweetalert2.all.min.js"></script>
      <script src="app.js"></script>
