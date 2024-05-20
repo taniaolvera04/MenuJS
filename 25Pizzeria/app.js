@@ -3,7 +3,7 @@ var tamanos = JSON.parse(localStorage.getItem("tamanos")) || [];
 var precios = JSON.parse(localStorage.getItem("precios")) || [];
 
 
-var carrito = [];
+var carrito = JSON.parse(localStorage.getItem("carrito")) ||[];
 
 
 var selectTipo = document.getElementById("tipo");
@@ -49,7 +49,7 @@ const addTipo = () => {
     let tipoPizza = document.getElementById('tipoPizza').value;
     tipos.push(tipoPizza);
     
-    localStorage.setItem("tipos", JSON.stringify(tipos));
+guardarLocal();
     
     cargarTipo();
 }
@@ -70,9 +70,7 @@ const addTC = () => {
 
     tamanos.push(tamanoPizza);
     precios.push(costoPizza);
-  
-    localStorage.setItem("tamanos", JSON.stringify(tamanos));
-    localStorage.setItem("precios", JSON.stringify(precios));
+  guardarLocal();
     
     cargarTC();
 }
@@ -103,6 +101,7 @@ addPedido.onclick = () => {
         };
         carrito.push(item);
         imprimirPedido();
+        guardarLocal();
     }
 }
 
@@ -169,6 +168,7 @@ const eliminarPedido = (index) => {
         if (result.isConfirmed) {
             carrito.splice(index, 1);
             imprimirPedido();
+            guardarLocal();
             Swal.fire("La orden ha sido eliminada", "", "success");
         }
     });
@@ -210,4 +210,13 @@ const pagarPedido = () => {
 const desaparecerPedido = () => {
     carrito = [];
     document.getElementById("carrito").innerHTML = "";
+    guardarLocal();
+}
+
+
+const guardarLocal=()=>{
+    localStorage.setItem("tipos", JSON.stringify(tipos));
+    localStorage.setItem("tamanos", JSON.stringify(tamanos));
+    localStorage.setItem("precios", JSON.stringify(precios));
+    localStorage.setItem("carrito", JSON.stringify(carrito));
 }
