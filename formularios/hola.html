@@ -1,0 +1,34 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BIENVENIDA</title>
+    <style>
+         body {
+          background: rgb(104,74,139);
+          background: radial-gradient(circle, rgba(104,74,139,1) 2%, rgba(0,0,0,1) 100%);
+          text-align: center;
+          margin-top: 300px;
+          font-size: 50px;
+          color: white;
+        }
+    </style>
+</head>
+<body>
+    <div id="user-info"></div>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+            const userInfo = document.getElementById('user-info');
+            const usuarioActual = JSON.parse(localStorage.getItem('usuarioActual'));
+            if (usuarioActual) {
+                userInfo.textContent = `¡Bienvenido/a ${usuarioActual.nombre}!`;
+            } else {
+                userInfo.textContent = 'No hay usuario actual registrado.';
+            }
+        });
+    </script>
+    </body>
+
+    </html>
