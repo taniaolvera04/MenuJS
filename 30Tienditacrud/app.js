@@ -35,22 +35,25 @@ const cargarTodo=()=>{
 }
 
 
-const agregarProducto=()=>{
-
+const agregarProducto = () => {
   let nombre = aNombre.value;
   let precio = aPrecio.value;
+  let categoria = selectCategoria.value; // Obtener la categoría seleccionada del menú desplegable
 
   productos.push(nombre);
   precios.push(precio);
   guardarLocal();
 
-  let item = {producto:nombre,precio:precio};
+  let item = { producto: nombre, precio: precio, categoria: categoria }; // Incluir la categoría en el objeto del artículo
 
   carrito.push(item);
   localStorage.setItem("carrito", JSON.stringify(carrito));
 
   imprimirP();
 };
+
+
+
 
 const imprimirP = () => {
   let divCarrito = document.getElementById("carrito");
@@ -68,7 +71,7 @@ const imprimirP = () => {
             <tr>  
                <td>${item.producto}</td>            
                <td>$${item.precio}.00</td>  
-               <td>$${item.categoria}</td>                   
+               <td>${item.categoria}</td>                   
             <td>
             
             <button class="btn btn-danger" onclick="eliminarP(${index})"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-trash3-fill" viewBox="0 0 16 16">
@@ -95,14 +98,23 @@ const eliminarP = (index) => {
     }).then((result) => {
         if (result.isConfirmed) {
             carrito.splice(index, 1);
-            imprimirP();
+            productos.splice(index, 1);
+            precios.splice(index, 1);
+
             guardarLocal();
+            localStorage.setItem("carrito", JSON.stringify(carrito));
+            imprimirP();
+
             Swal.fire("El producto ha sido eliminado", "", "success");
         }
     });
 }
 
+
+
 const cargarCategoria = () => {
+  categorias = JSON.parse(localStorage.getItem("categorias")) || [];
+
   const selectCategoria = document.getElementById("selectCategoria");
   const selectCategoriaM = document.getElementById("cCategoria");
 
@@ -172,9 +184,13 @@ const agregarCategoria=()=>{
         denyButtonText: "No estoy seguro"
     }).then((result) => {
         if (result.isConfirmed) {
-            carrito2.splice(index, 1);
-            imprimirC();
+          carrito2.splice(index, 1);
+            localStorage.setItem("carrito2", JSON.stringify(carrito2));
+            
+            categorias.splice(index, 1);
             guardarLocalC();
+
+            cargarTodo();
             Swal.fire("La categoría ha sido eliminada", "", "success");
         }
     });
