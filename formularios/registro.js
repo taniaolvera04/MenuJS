@@ -1,7 +1,8 @@
 var registrar = document.getElementById("registrar");
-var usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
+
 
 registrar.onclick = (event) => {
+  var usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
   event.preventDefault(); 
 
   var nombre = document.getElementById("nombre").value;
