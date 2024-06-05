@@ -2,140 +2,126 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>TIENDITA RELACIONAL</title>
     <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
     <style>
+        /* Estilos comunes para enlaces */
+        a {
+            padding: 17px 40px;
+            border-radius: 10px;
+            border: 0;
+            background-color: rgb(255, 56, 86);
+            letter-spacing: 1.5px;
+            font-size: 15px;
+            transition: all .3s ease;
+            box-shadow: rgb(201, 46, 70) 0px -11px 0px 0px;
+            color: white;
+            text-decoration: none;
+        }
 
-      a {
-  padding: 17px 40px;
-  border-radius: 10px;
-  border: 0;
-  background-color: rgb(255, 56, 86);
-  letter-spacing: 1.5px;
-  font-size: 15px;
-  transition: all .3s ease;
-  box-shadow: rgb(201, 46, 70) 0px -11px 0px 0px;
-  color: white;
-  text-decoration:none;
-}
+        a:hover {
+            box-shadow: rgb(201, 46, 70) 0px 7px 0px 0px;
+        }
 
-a:hover {
-  box-shadow: rgb(201, 46, 70) 0px 7px 0px 0px;
-}
-
-a:active {
-  background-color: rgb(255, 56, 86);
-
-  box-shadow: rgb(201, 46, 70) 0px 0px 0px 0px;
-  transform: translateY(5px);
-  transition: 200ms;
-}
-
+        a:active {
+            background-color: rgb(255, 56, 86);
+            box-shadow: rgb(201, 46, 70) 0px 0px 0px 0px;
+            transform: translateY(5px);
+            transition: 200ms;
+        }
     </style>
 </head>
-
-
 <body class="text-center" onload="imprimirC()">
-  
 
     <nav class="navbar bg-dark border-bottom border-body" data-bs-theme="dark">
         <div class="container-fluid">
             <span class="navbar-brand m-auto w-100 h1">TIENDITA RELACIONAL</span>
-          </a>
         </div>
-      </nav><br><br>
+    </nav><br><br>
       
-      <a href="index.html">CATEGORIA</a>
-      <a href="producto.html">PRODUCTO</a>
+    <a href="index.html">CATEGORÍA</a>
+    <a href="producto.html">PRODUCTO</a>
 
-      <div class="container-fluid m-auto w-75">
+    <div class="container-fluid m-auto w-75">
         <div class="card text-center mt-4">
             <div class="card-header">
-              
-  <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#addCategoria"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-circle mx-2" viewBox="0 0 16 16">
-  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
-  <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"/>
-</svg></button>
+                <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#addCategoria">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-circle mx-2" viewBox="0 0 16 16">
+                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+                        <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"/>
+                    </svg>
+                </button>
             </div>
             <div class="card-body">
-
-
             </div>
 
-            <div id="carrito2"></div>
+            <div id="categorias"></div>
 
             <div class="card-footer text-body-secondary">
-              PIZZERIA DE LESLYE Y TANIA
+                TIENDITA RELACIONAL DE LESLYE Y TANIA
             </div>
-          </div> 
-      </div>
-
-
-<div class="modal fade" id="addCategoria" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5 w-100 m-auto" id="exampleModalLabel">
-        AGREGAR CATEGORÍA</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-   <table class="table w-100 m-auto">
-                <tr>
-                  <td>
-                    <label for="categoria" class="form-label">CATEGORÍA</label>
-                    <input type="text" class="form-control text-center" id="aCategoria">
-                  </td>
-                </tr>
-   </table><br>
-
-   <button class="btn btn-success" onclick="agregarCategoria()"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-bag-plus-fill mx-4" viewBox="0 0 16 16">
-    <path fill-rule="evenodd" d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0M8.5 8a.5.5 0 0 0-1 0v1.5H6a.5.5 0 0 0 0 1h1.5V12a.5.5 0 0 0 1 0v-1.5H10a.5.5 0 0 0 0-1H8.5z"/>
-  </svg></button>
-
-      </div>
-      <div class="modal-footer">
-      </div>
+        </div> 
     </div>
-  </div>
-</div>
 
+    <div class="modal fade" id="addCategoria" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5 w-100 m-auto" id="exampleModalLabel">AGREGAR CATEGORÍA</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <table class="table w-100 m-auto">
+                        <tr>
+                            <td>
+                                <label for="categoria" class="form-label">CATEGORÍA</label>
+                                <input type="text" class="form-control text-center" id="aCategoria">
+                            </td>
+                        </tr>
+                    </table><br>
 
-
-<div class="modal fade" id="editCategoria" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5 w-100 m-auto" id="exampleModalLabel">
-          ACTUALIZAR CATEGORÍA</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <button class="btn btn-success" onclick="agregarCategoria()">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-bag-plus-fill mx-4" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0M8.5 8a.5.5 0 0 0-1 0v1.5H6a.5.5 0 0 0 0 1h1.5V12a.5.5 0 0 0 1 0v-1.5H10a.5.5 0 0 0 0-1H8.5z"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="modal-footer"></div>
+            </div>
         </div>
-        <div class="modal-body">
-     <table class="table w-100 m-auto">
-                  <tr>
-                    <td>
-                      <label for="categoria" class="form-label">CATEGORÍA</label>
-                      <input type="text" class="form-control text-center" id="eCategoria">
-                    </td>
-                  </tr>
-     </table><br>
-  
-     <button class="btn btn-success" id="editarC"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-bag-plus-fill mx-4" viewBox="0 0 16 16">
-      <path fill-rule="evenodd" d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0M8.5 8a.5.5 0 0 0-1 0v1.5H6a.5.5 0 0 0 0 1h1.5V12a.5.5 0 0 0 1 0v-1.5H10a.5.5 0 0 0 0-1H8.5z"/>
-    </svg></button>
-  
-        </div>
-        <div class="modal-footer">
-        </div>
-      </div>
     </div>
-  </div>
-  
 
+     <div class="modal fade" id="editCategoria" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5 w-100 m-auto" id="exampleModalLabel">ACTUALIZAR CATEGORÍA</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <table class="table w-100 m-auto">
+                        <tr>
+                            <td>
+                                <label for="categoria" class="form-label">CATEGORÍA</label>
+                                <input type="text" class="form-control text-center" id="eCategoria">
+                            </td>
+                        </tr>
+                    </table><br>
 
-    <script src="bootstrap.bundle.min.js"></script>
-<script src="sweetalert2.all.min.js"></script>
+                    <button class="btn btn-success" onclick="editC()">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-bag-plus-fill mx-4" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0M8.5 8a.5.5 0 0 0-1 0v1.5H6a.5.5 0 0 0 0 1h1.5V12a.5.5 0 0 0 1 0v-1.5H10a.5.5 0 0 0 0-1H8.5z"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="modal-footer"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../bootstrap/js/sweetalert2.all.min.js"></script>
     <script src="app.js"></script>
 </body>
 </html>
