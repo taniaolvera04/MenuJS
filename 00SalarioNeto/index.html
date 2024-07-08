@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SALARIO NETO</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+</head>
+<body class="text-center">
+
+    <nav class="navbar bg-dark border-bottom border-body" data-bs-theme="dark">
+        <div class="container-fluid">
+            <span class="navbar-brand m-auto w-100 h1">ALUMNO</span>
+          </a>
+        </div>
+      </nav><br><br>
+  
+
+
+    <table class="table w-75 m-auto">
+        <tr>
+            <td><h4>CARGO</h4></td>
+            <td><select name="cargos" id="cargo" class="form-select text-center">
+                <option value="secretaria">Secretaria</option>
+                <option value="gerente">Gerente</option>
+                <option value="cajero">Cajero</option>
+            </select></td>
+            
+            <td><h4>HORAS</h4></td>
+            <td><input type="range" id="horas" min="1" max="50" value="1" class="form-control"></td>
+            <td><div id="vh">1</div></td>
+            <td><h4>ANTIGÜEDAD</h4></td>
+            <td><input type="range" id="anti" min="1" max="30" value="1" class="form-control"></td>
+            <td><div id="va">1</div></td>
+        </tr>
+    </table><br><br>
+
+
+<table class="table w-50 m-auto table-striped">
+    <tr>
+        <td>PERCEPCIONES</td>
+        <td></td>
+        <td></td>
+        <td colspan="2">DEDUCCIONES</td>
+    </tr>
+    <tr>
+        <td>SUELDO BASE</td>
+        <td id="sb"></div></td>
+        <td>ISR</td>
+        <td id="is"></td>
+    </tr>
+    <tr>
+        <td>CANASTA BÁSICA</td>
+        <td id="cb"></td>
+        <td>SERVICIO SALUD</td>
+        <td id="ss"></td>
+    </tr>
+    <tr>
+        <td>ANTIGUEDAD</td>
+        <td id="an"> </td>
+        <td>AFORE</td>
+        <td id="af"></td>
+    </tr>
+    <tr>
+        <td>PUNTUALIDAD</td>
+        <td id="pt"> </td>
+        <td>SINDICATO</td>
+        <td id="si"> </td>
+    </tr>
+    <tr>
+        <td>EFICIENCIA</td>
+        <td id="ef"></td>
+        <td colspan="2"></td>
+    </tr>
+    <tr>
+        <td>TOTAL PERCEPCIONES</td>
+        <td id="tp"></td>
+        <td>TOTAL REDUCCIONES</td>
+        <td id="tre"></td>
+    </tr>
+    <tr>
+
+         <td></td>
+        <td>SALARIO NETO</td>
+        <td id="sn"></td>
+    </tr>
+</table>
+
+
+ <script src="app.js"></script>   
+</body>
+</html>
