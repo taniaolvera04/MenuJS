@@ -345,7 +345,7 @@ const mostrarTarjeta = () => {
             .chip {
                 width: 50px;
                 height: 40px;
-                background: url('/img/chip.png') no-repeat ;
+                background: url('img/chip.png') no-repeat ;
                 background-size: cover;
                 position: absolute;
                 top: 20px;
@@ -354,7 +354,7 @@ const mostrarTarjeta = () => {
             .logo {
                 width: 70px;
                 height: 60px;
-                background: url('/img/visa.png') no-repeat;
+                background: url('img/visa.png') no-repeat;
                 background-size: cover;
                 position: absolute;
                 top: 20px;
